@@ -1,15 +1,14 @@
 import React from 'react'
+import News from './News';
 
-export default function Newsletter({ title, content, header }) {
-    return (
-      <div className="newsletter">
-        <h2>{title}</h2>
-        {header && (
-            <div className="header">
-                {header.map((header, index))}
-        )}
-      </div>  
-    )
-}
-
-export default Newsletter
+export default function newsletter() {
+  return (
+    <div>
+      <News
+      title="Article title"
+      content="something"
+      header={['Header 1', 'Header 2', 'Header 3']}
+      />
+    </div>
+  );
+};
